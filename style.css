@@ -1,0 +1,401 @@
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+     overflow-x: hidden; /--right gutter fix--/
+     font-family: sans-serif;
+     color: black;
+     background-color:white;
+  }
+
+
+/*--- iOS Landing Page Fix --*/
+.landing {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: table;
+  background: #E9ECEF;
+  z-index: -1;
+}
+.home-wrap {
+  clip: rect(0, auto, auto, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.home-inner {
+  position: fixed;
+  display: table;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  will-change: transform;
+}
+
+.navbar {
+	text-transform: uppercase;
+	text-decoration: underline;
+	font-style: italic;
+	background-color: black!important;
+}
+
+.home-inner {
+	background-image: url('img/bg.jpg');
+}
+
+ /*--- Intro CSS --*/
+
+.caption {
+	width: 100%;
+	max-width: 100%;
+	position: absolute;
+	top: 40%;
+	z-index: 1;
+}
+
+/*-- Fade in effect --*/
+
+.fadeIn {
+  opacity: 0;
+  animation: fadeIn 2.8s forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.caption h2 {
+	color: white;
+	font-size: 4rem;
+	text-transform: uppercase;
+	padding-bottom: 2rem;
+	
+}
+.caption h3 {
+	color: white;
+	font-size: 2.4rem;
+	text-transform: lowercase;
+	padding-bottom: 2rem;
+	font-family: 'Annie Use Your Telescope';
+}
+
+/*--- Button menu --*/
+.buttons {
+	width: 100%;
+	max-width: 100%;
+	position: absolute;
+	top: 90%;
+	z-index: 1;
+	
+
+}
+
+.btn-menu{
+	background-color: brown;
+	border-color: brown;
+	text-transform: uppercase;
+	border-radius: 50%;
+	width: 110px;
+	
+}
+
+.btn-menu:hover{
+	background-color: black;
+	border-color: black;
+	color: white;
+}
+
+.btn-contact{
+	background-color: transparent;
+	border-color: brown;
+	text-transform: uppercase;
+	width: 200px;
+	color: white;
+	
+}
+
+.btn-contact:hover{
+	background-color: brown;
+	border-color: black;
+	color: white;
+}
+
+/*-- Scroll Down --
+.scrollDown::before{
+  content: '╲╱';
+  color: #fff;
+  position: absolute;
+  opacity: 0.8;
+  text-shadow: 0 0 .5rem rgba(0,0,0,0.5);
+  width: 6rem;
+  font-size: 2rem;
+  height: 4rem;
+  line-height: 4rem;
+  bottom: 2rem;
+  margin-left: -3rem;
+  left: 50%;
+  animation: bounce 1s ease infinite;
+}
+
+@keyframes bounce {
+  50% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/*
+.scrollDown{
+	position: absolute;
+	left: 1000px;
+	top: 600px;
+    cursor: pointer;
+}
+*/
+
+/*-- Photo Gallery CSS --*/
+.photo-gallery {
+  color:#313437;
+  background-color: black;
+  
+}
+
+.photo-gallery p {
+  color:#7d8285;
+}
+
+.photo-gallery h2 {
+  font-weight:bold;
+  margin-bottom:40px;
+  padding-top:40px;
+  color:white;
+}
+
+@media (max-width:767px) {
+  .photo-gallery h2 {
+    margin-bottom:25px;
+    padding-top:25px;
+    font-size:24px;
+  }
+}
+
+.photo-gallery .intro {
+  font-size:16px;
+  max-width:500px;
+  margin:0 auto 40px;
+}
+
+.photo-gallery .intro p {
+  margin-bottom:0;
+}
+
+.photo-gallery .photos {
+  padding-bottom:20px;
+}
+
+.photo-gallery .item {
+  padding-bottom:30px;
+}
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
+.fadeIn {
+  opacity: 0;
+  animation: fadeIn 2.8s forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#map{
+	background-color: grey;
+	color: white;
+}
+
+/*--Contact CSS--*/
+.contact-clean {
+  background:url('img/bg.jpg');
+  padding:80px 0;
+}
+
+@media (max-width:767px) {
+  .contact-clean {
+    padding:20px 0;
+  }
+}
+
+.contact-clean form {
+  max-width:480px;
+  width:90%;
+  margin:0 auto;
+  background-color:#ffffff;
+  padding:40px;
+  border-radius:4px;
+  color:#505e6c;
+  box-shadow:1px 1px 5px rgba(0,0,0,0.1);
+}
+
+@media (max-width:767px) {
+  .contact-clean form {
+    padding:30px;
+  }
+}
+
+.contact-clean h2 {
+  margin-top:5px;
+  font-weight:bold;
+  font-size:28px;
+  margin-bottom:36px;
+  color:inherit;
+}
+
+.contact-clean .form-group:last-child {
+  margin-bottom:5px;
+}
+
+.contact-clean form .form-control {
+  background:#fff;
+  border-radius:2px;
+  box-shadow:1px 1px 1px rgba(0,0,0,0.05);
+  outline:none;
+  color:inherit;
+  padding-left:12px;
+  height:42px;
+}
+
+.contact-clean form .form-control:focus {
+  border:1px solid #b2b2b2;
+}
+
+.contact-clean form textarea.form-control {
+  min-height:100px;
+  max-height:260px;
+  padding-top:10px;
+  resize:vertical;
+}
+
+.contact-clean form .btn {
+  padding:16px 32px;
+  border:none;
+  background:none;
+  box-shadow:none;
+  text-shadow:none;
+  opacity:0.9;
+  text-transform:uppercase;
+  font-weight:bold;
+  font-size:13px;
+  letter-spacing:0.4px;
+  line-height:1;
+  outline:none !important;
+}
+
+.contact-clean form .btn:hover {
+  opacity:1;
+}
+
+.contact-clean form .btn:active {
+  transform:translateY(1px);
+}
+
+.contact-clean form .btn-primary {
+  background-color:#055ada !important;
+  margin-top:15px;
+  color:#fff;
+}
+
+/*-- Footer --*/
+.footer-basic {
+  padding:40px 0;
+  background-color:#ffffff;
+  color:#4b4c4d;
+}
+
+.footer-basic ul {
+  padding:0;
+  list-style:none;
+  text-align:center;
+  font-size:18px;
+  line-height:1.6;
+  margin-bottom:0;
+}
+
+.footer-basic li {
+  padding:0 10px;
+}
+
+.footer-basic ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.8;
+}
+
+.footer-basic ul a:hover {
+  opacity:1;
+}
+
+.footer-basic .social {
+  text-align:center;
+  padding-bottom:25px;
+}
+
+.footer-basic .social > a {
+  font-size:24px;
+  width:40px;
+  height:40px;
+  line-height:40px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  border:1px solid #ccc;
+  margin:0 8px;
+  color:inherit;
+  opacity:0.75;
+}
+
+.footer-basic .social > a:hover {
+  opacity:0.9;
+}
+
+.footer-basic .copyright {
+  margin-top:15px;
+  text-align:center;
+  font-size:13px;
+  color:#aaa;
+  margin-bottom:0;
+}
